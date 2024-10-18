@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+@layer base {
+  @font-face {
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    line-height: normal;
+    src: url("/fonts/SpaceMono-Regular.ttf") format("ttf");
+  }
+}
+
+.space-mono {
+  font-family: "Space Mono", monospace;
+  font-style: normal;
+  line-height: normal;
+}
+
+.kode-mono {
+  font-family: "Kode Mono", monospace;
+  font-style: normal;
+  line-height: normal;
+}
+
+html {
+  font-family: "Space Mono", monospace;
+  font-style: normal;
+  line-height: normal;
+}
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+/* 
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.card-shadow {
+  box-shadow: #63636333 0 2px 8px;
+}
+
+li a .arrow {
+  width: 50px;
+  height: 50px;
+  background: #040a18;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  outline: 2px solid #040a18;
+  border: 5px solid #ffffff;
+}
+
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #040a1880;
+}
+td p {
+  color: black;
+}
+
+.top-board-color {
+  border-color: rgba(107, 107, 107, 0.23);
+}
+
+.user-bg-color {
+  background: rgba(28, 28, 28, 0.37);
+}
+.dashboard-content-border {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.progressbar {
+  border-radius: 2px;
+  background: rgba(217, 217, 217, 0.18);
+  height: 6px;
+}
+
+.responsive-text {
+  @media (min-width: 1139px) {
+    min-height: fit-content;
+  }
+  min-height: 60px;
+}
+
+.modal-shadow {
+  box-shadow: 0px 0px 16px 4px rgba(247, 255, 152, 0.2);
+}
