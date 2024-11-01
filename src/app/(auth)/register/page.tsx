@@ -110,8 +110,12 @@ const RegisterPage: React.FC = () => {
       <Head>
         <title>Login - Daeta</title>
       </Head>
-      <div className="hidden lg:flex lg:w-1/2 bg-[#262626] pt-[84px] pl-8 items-center justify-center">
-        <img src="/AuthBg.png" alt="auth_logo" className="h-full" />
+      <div className="hidden lg:flex lg:w-1/2 bg-[url('/test.png')] pt-0 pl-8 items-center justify-center">
+        <img
+          src="/AuthBg.png"
+          alt="auth_logo"
+          className="h-[calc(100vh-100px)]"
+        />
       </div>
       <div className="w-full lg:w-1/2 flex bg-[#1c1c1c] py-[84px] px-5 lg:px-[84px] xl:px-[146px]">
         <div className="w-full max-w-[580px] mx-auto">
