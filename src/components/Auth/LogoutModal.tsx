@@ -29,7 +29,7 @@ const LogoutModal: FC<LogoutModalProps> = ({ isOpen, onClose }) => {
         <div className="text-[#E0DECF] font-bold">
           <p className="text-[#E0DECF] font-bold text-center">Hello user!</p>
           <p className="text-[#E0DECF] font-bold text-center">
-            Are you sure you want to logout from Daeta?
+            Are you sure you want to logout from DÆTA?
           </p>
         </div>
         <div className="flex flex-row items-center justify-around">

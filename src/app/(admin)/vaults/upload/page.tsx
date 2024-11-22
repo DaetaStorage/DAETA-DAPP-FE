@@ -208,7 +208,7 @@ export default function Vault() {
                 <th className="py-3 px-6 text-left">Name</th>
                 <th className="py-3 px-6 text-left">Size</th>
                 <th className="py-3 px-6 text-left">Upload Date</th>
-                <th className="py-3 px-6 text-right"></th>
+                <th className="py-3 px-6 text-right">Download</th>
               </tr>
             </thead>
             <tbody className="text-gray-600 text-sm">
@@ -216,7 +216,7 @@ export default function Vault() {
                 files.map((file, index) => (
                   <tr
                     key={index}
-                    className="border-b text-[#D9D9D9] border-[rgba(255,255,255,0.09)] hover:bg-gray-400"
+                    className="border-b text-[#D9D9D9] border-[rgba(255,255,255,0.09)] hover:bg-[#1C1C1C] transition-all duration-300 ease-in-out hover:cursor-pointer"
                   >
                     <td className="py-3 px-6 text-left">
                       <input
@@ -262,14 +262,10 @@ export default function Vault() {
                     </td>
                     <td className="py-3 px-6">{file.size}</td>
                     <td className="py-3 px-6">{file.date}</td>
-                    <td className="py-3 px-6 flex gap-3 my-auto">
-                      <div
-                        className="cursor-pointer"
-                        onClick={() => handleDownload(file)}
-                      >
+                    <td className="py-3 px-6 flex gap-3 my-auto cursor-pointer justify-end">
+                      <div onClick={() => handleDownload(file)}>
                         <DownloadSvg />
                       </div>
-                      <ThreeDotsSvg />
                     </td>
                   </tr>
                 ))}

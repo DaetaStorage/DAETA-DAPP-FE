@@ -1,10 +1,14 @@
 import Link from "next/link";
 import RightArrow from "@/components/svg/rightArrow";
 
-const ShowCard = (props: { title: string; content: JSX.Element }) => {
+const ShowCard = (props: {
+  link: string;
+  title: string;
+  content: JSX.Element;
+}) => {
   return (
     <Link
-      href="/usage-guidelines"
+      href={props.link}
       className="list-none font-normal text-base leading-6 text-white flex flex-col h-full justify-between"
     >
       <div className="h-full flex flex-col justify-between gap-x-[50px] p-6 rounded-lg border hover:border-[#F7FF98] border-[rgba(255,255,255,0.09)] transition-all duration-500 ease-in-out hover:-translate-y-1 group">

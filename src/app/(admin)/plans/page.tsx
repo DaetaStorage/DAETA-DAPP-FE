@@ -1,10 +1,14 @@
+"use client";
 import PlanCard from "@/components/Fragment/PlanCard";
+import { useState } from "react";
 
 export default function PricingPlans() {
-  const contexts = [
+  const [isEnterprise, setIsEnterprise] = useState(false);
+
+  const individual_contexts = [
     {
       title: "Basic",
-      size: "20",
+      size: "500",
       content: (
         <>
           <div className="mb-[2px]">End to end encryption</div>
@@ -12,11 +16,13 @@ export default function PricingPlans() {
           <div className="mb-[2px]">50 GB Bandwidth</div>
         </>
       ),
-      price: 9.99,
+      unit: "GB",
+      price: 6.99,
     },
     {
       title: "Professional",
       size: "50",
+      unit: "GB",
       content: (
         <>
           <div className="mb-[2px]">End to end encryption</div>
@@ -24,11 +30,12 @@ export default function PricingPlans() {
           <div className="mb-[2px]">50 GB Bandwidth</div>
         </>
       ),
-      price: 9.99,
+      price: 14.99,
     },
     {
       title: "Small Business",
       size: "100",
+      unit: "GB",
       content: (
         <>
           <div className="mb-[2px]">End to end encryption</div>
@@ -36,7 +43,48 @@ export default function PricingPlans() {
           <div className="mb-[2px]">50 GB Bandwidth</div>
         </>
       ),
-      price: 9.99,
+      price: 29.99,
+    },
+  ];
+  const enterprise_contexts = [
+    {
+      title: "Starter",
+      size: "500",
+      unit: "GB",
+      content: (
+        <>
+          <div className="mb-[2px]">End to end encryption</div>
+          <div className="mb-[2px]">Private file sharing</div>
+          <div className="mb-[2px]">50 GB Bandwidth</div>
+        </>
+      ),
+      price: 39.99,
+    },
+    {
+      title: "Standard",
+      size: "1",
+      unit: "TB",
+      content: (
+        <>
+          <div className="mb-[2px]">End to end encryption</div>
+          <div className="mb-[2px]">Private file sharing</div>
+          <div className="mb-[2px]">50 GB Bandwidth</div>
+        </>
+      ),
+      price: 14.99,
+    },
+    {
+      title: "Professional",
+      size: "5",
+      unit: "TB",
+      content: (
+        <>
+          <div className="mb-[2px]">End to end encryption</div>
+          <div className="mb-[2px]">Private file sharing</div>
+          <div className="mb-[2px]">50 GB Bandwidth</div>
+        </>
+      ),
+      price: 29.99,
     },
   ];
 
@@ -45,11 +93,15 @@ export default function PricingPlans() {
       <h2 className="text-2xl font-bold mb-3 text-[#D9D9D9]">Pricing Plans</h2>
       <div className="flex flex-row justify-between items-center">
         <p className="text-[#D9D9D9] text-[14px]">
-          Find a plan that works best for you. We also accept payment in DAETA
+          Find a plan that works best for you. We also accept payment in DÆTA
           Tokens.
         </p>
         <div className="flex items-center space-x-4">
-          <span className="text-[rgba(217,217,217,0.55)] text-[14px] font-bold">
+          <span
+            className={`text-[14px] font-bold ${
+              !isEnterprise ? "text-[#D9D9D9]" : "text-[rgba(217,217,217,0.55)]"
+            }`}
+          >
             Individual
           </span>
           <div className="relative">
@@ -63,24 +115,33 @@ export default function PricingPlans() {
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
+              checked={isEnterprise}
+              onChange={() => setIsEnterprise(!isEnterprise)}
             />
           </div>
-          <span className="text-[#D9D9D9] text-[14px] font-bold">
+          <span
+            className={`text-[14px] font-bold ${
+              isEnterprise ? "text-[#D9D9D9]" : "text-[rgba(217,217,217,0.55)]"
+            }`}
+          >
             Enterprise
           </span>
         </div>
       </div>
       <div className="flex justify-center mt-[67px]"></div>
-      <ul className="grid items-center grid-cols-3 gap-y-5 gap-x-[20px]">
-        {contexts.map((context, index) => (
-          <PlanCard
-            key={index}
-            title={context.title}
-            size={context.size}
-            content={context.content}
-            price={context.price}
-          />
-        ))}
+      <ul className="grid items-center xl:grid-cols-3 grid-cols-1 gap-y-5 gap-x-[20px]">
+        {(isEnterprise ? enterprise_contexts : individual_contexts).map(
+          (context, index) => (
+            <PlanCard
+              key={index}
+              title={context.title}
+              size={context.size}
+              unit={context.unit}
+              content={context.content}
+              price={context.price}
+            />
+          )
+        )}
       </ul>
     </div>
   );

@@ -3,21 +3,28 @@ import ShowCard from "@/components/Fragment/ShowCard";
 const Resources = () => {
   const contexts = [
     {
-      title: "Usage Guidelines",
-      content: <>Learn everything you need to know about DaeTa Usage</>,
-    },
-    {
-      title: "Blogs",
-      content: <>Access wealth of information, shares on our articles</>,
-    },
-    {
-      title: "Still Need Help?",
+      title: "Docs",
       content: (
         <>
-          Can&apos;t find what you&apos;re <br />
-          looking for
+          Access detailed guides and insights to effectively use the DÆTA
+          platform.
         </>
       ),
+      link: "https://docs.daeta.xyz/",
+    },
+    {
+      title: "Medium",
+      content: (
+        <>Stay updated with articles and developments on the DÆTA ecosystem.</>
+      ),
+      link: "https://daetastorage.medium.com/",
+    },
+    {
+      title: "Discord",
+      content: (
+        <>Connect with our community for support and discussions on Discord.</>
+      ),
+      link: "https://discord.gg/DaetaStorage",
     },
   ];
 
@@ -28,6 +35,7 @@ const Resources = () => {
       <ul className="grid items-center grid-cols-3 gap-y-5 gap-x-[20px]">
         {contexts.map((context, index) => (
           <ShowCard
+            link={context.link}
             key={index}
             title={context.title}
             content={context.content}

@@ -1,6 +1,4 @@
 "use client";
-import EarphoneSvg from "@/components/svg/earphone";
-import FaqSvg from "@/components/svg/faq";
 import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
 
@@ -17,7 +15,7 @@ const Profile = () => {
           <div className="flex flex-row gap-8 w-full">
             <input
               className="w-full py-3 pl-[42px] bg-transparent rounded-lg border border-[#D9D9D9] focus-within:border-[#F7FF98] text-[#D9D9D9] font-bold"
-              placeholder="Username"
+              placeholder="Full Name"
             ></input>
             <input
               className="w-full py-3 pl-[42px] bg-transparent rounded-lg border border-[#D9D9D9] focus:border-[#F7FF98] text-[#D9D9D9] font-bold"
@@ -50,7 +48,7 @@ const Profile = () => {
         </div>
       </div>
       <div className="mt-6 flex flex-row gap-6">
-        <div className="rounded-[16px] bg-[#1C1C1C] pt-8 pl-7 pb-7 px-5 flex flex-col w-full">
+        <div className="rounded-[16px] bg-[#1C1C1C] pt-8 pl-7 pb-7 px-5 flex flex-col w-1/2">
           <p className="text-[#D9D9D9] text-[24px] font-bold">Password</p>
           <input
             className="mt-7 w-4/5 rounded-[8px] border border-[#D9D9D9] pl-[42px] py-3 bg-transparent text-[#D9D9D9] font-bold"
@@ -71,7 +69,7 @@ const Profile = () => {
             Forgot Password?
           </div>
         </div>
-        <div className="rounded-[16px] bg-[#1C1C1C] pt-8 pl-7 pb-7 flex flex-col w-full">
+        {/* <div className="rounded-[16px] bg-[#1C1C1C] pt-8 pl-7 pb-7 flex flex-col w-full">
           <p className="text-[#D9D9D9] text-[24px] font-bold">
             Help and Support
           </p>
@@ -105,7 +103,7 @@ const Profile = () => {
               <p className="text-[#3B7DFF]">FAQs</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

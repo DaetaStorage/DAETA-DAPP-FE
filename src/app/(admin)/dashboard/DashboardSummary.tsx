@@ -1,3 +1,4 @@
+import { convertTimestampToDate } from "@/utils/formatDate";
 import { useSelector } from "react-redux";
 
 const DashboardSummary = () => {
@@ -10,10 +11,17 @@ const DashboardSummary = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-[#262626] border border-[#F7FF98] rounded-lg px-[18px] py-4 flex flex-col hover:scale-105 transition-all duration-300 ease-in cursor-pointer">
-          <span className="text-xl font-semibold select-none">1</span>
+          <span className="text-xl font-semibold select-none">
+            {user && user.vaults ? user.vaults.length : 0}
+          </span>
           <span className="text-gray-300 select-none">Vaults</span>
           <span className="text-gray-200 text-xs mt-2 select-none">
-            Last update 8/7/2024
+            Last update{" "}
+            {convertTimestampToDate(
+              user && user.vaults && user.vaults[0]
+                ? user.vaults[0].vault.updated_at
+                : user?.updated_at
+            )}
           </span>
           <div className="h-7 w-7 flex items-center justify-center rounded bg-[#1C1C1C] mt-2">
             <svg
@@ -34,7 +42,7 @@ const DashboardSummary = () => {
           <span className="text-xl font-semibold select-none">2</span>
           <span className="text-gray-300 select-none">Access Grants</span>
           <span className="text-gray-200 text-xs mt-2 select-none">
-            Last update 8/7/2024
+            Coming Soon
           </span>
           <div className="h-7 w-7 flex items-center justify-center rounded bg-[#1C1C1C] mt-2">
             <svg

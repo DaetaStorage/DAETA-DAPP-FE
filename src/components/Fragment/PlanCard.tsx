@@ -1,8 +1,7 @@
-import RightArrow from "@/components/svg/rightArrow";
-
 const PlanCard = (props: {
   title: string;
   size: string;
+  unit: string;
   content: JSX.Element;
   price: number;
 }) => {
@@ -16,7 +15,7 @@ const PlanCard = (props: {
           <div className="text-[52px] text-[#D9D9D9] font-bold kode-mono">
             {props.size}
             <span className="font-bold text-[#D9D9D9] inline-block text-[16px] ml-2">
-              GB
+              {props.unit}
             </span>
           </div>
           <div className="text-[#D9D9D9] text-[16px] w-full flex flex-col gap-2">
@@ -30,7 +29,7 @@ const PlanCard = (props: {
           </span>
         </div>
         <button className="rounded-lg py-[15px] w-full bg-[#F7FF98] text-[#262626] border border-[#F7FF98] hover:bg-transparent hover:text-[#D9D9D9] transition-all duration-300 ease-in-out font-bold leading-7 mt-10 flex flex-row justify-center items-center">
-          Upgrade
+          Upgrade(coming soon)
         </button>
       </div>
     </div>

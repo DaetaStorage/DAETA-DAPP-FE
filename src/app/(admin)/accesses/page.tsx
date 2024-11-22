@@ -14,14 +14,17 @@ const Accesses = () => {
             Gives access through S3 compatible tools <br /> and services via our
             hosted Gateway MT.
           </p>
-          <button className="mt-8 rounded-lg py-[12px] px-7 bg-[#F7FF98] text-[#262626] border border-[#F7FF98] hover:bg-transparent hover:text-[#F7FF98] transition-all duration-300 ease-in-out font-bold leading-7 flex flex-row justify-center items-center">
-            Create
+          <button
+            className="mt-8 rounded-lg py-[12px] px-7 bg-[#3A3A3A] text-[#A5A5A5] border border-[#3A3A3A] cursor-not-allowed transition-all duration-300 ease-in-out font-bold leading-7 flex flex-row justify-center items-center"
+            disabled
+          >
+            Coming Soon
           </button>
         </div>
         <div className="mt-8 flex flex-row items-center">
           <PlusSvg width={16} height={16} color="#D9D9D9" />
           <p className="ml-4 text-white">
-            How to connect Daeta with my project?{" "}
+            How to connect DÆTA with my project?{" "}
           </p>
         </div>
       </div>
@@ -52,7 +55,7 @@ const Accesses = () => {
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                {/* <tbody>
                   <tr>
                     <td className="pl-7 pt-5 pb-4 text-[#D9D9D9]">
                       Techfinite
@@ -61,7 +64,7 @@ const Accesses = () => {
                       10/4/2024, 4:26:10 PM UTC
                     </td>
                   </tr>
-                </tbody>
+                </tbody> */}
               </table>
             </div>
           </div>
@@ -69,9 +72,9 @@ const Accesses = () => {
       </div>
 
       {/* 1 access grants */}
-      <div className="mt-6 pl-7">
+      {/* <div className="mt-6 pl-7">
         <p className="text-[#D9D9D9]">1 access grants</p>
-      </div>
+      </div> */}
     </div>
   );
 };

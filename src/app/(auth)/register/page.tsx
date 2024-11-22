@@ -108,11 +108,11 @@ const RegisterPage: React.FC = () => {
   return (
     <div className="flex min-h-screen font-space-mono">
       <Head>
-        <title>Login - Daeta</title>
+        <title>Login - DÆTA</title>
       </Head>
-      <div className="hidden lg:flex lg:w-1/2 bg-[url('/test.png')] pt-0 pl-8 items-center justify-center">
+      <div className="hidden lg:flex lg:w-1/2 bg-[#262626] items-center justify-center SpaceMono">
         <img
-          src="/AuthBg.png"
+          src="https://vesting.daeta.xyz/AuthBg1.png"
           alt="auth_logo"
           className="h-[calc(100vh-100px)]"
         />
@@ -120,18 +120,18 @@ const RegisterPage: React.FC = () => {
       <div className="w-full lg:w-1/2 flex bg-[#1c1c1c] py-[84px] px-5 lg:px-[84px] xl:px-[146px]">
         <div className="w-full max-w-[580px] mx-auto">
           <div className="flex flex-col gap-5 items-center">
-            <div className="text-[#F7FF98] text-[28px] sm:text-[36px] space-mono font-bold tracking-[0.3px]">
-              Welcome back!
+            <div className="text-[#F7FF98] text-[28px] sm:text-[36px] space-mono font-bold tracking-[0.3px] text-center">
+              Welcome to the DÆTA Storage
             </div>
           </div>
 
-          <div className="w-full text-black mt-[60px] rounded-md bg-[#262626] pt-8 pb-8 px-10 shadow-[0px_0px_16px_4px_rgba(247,255,152,0.20)] flex flex-col items-center">
+          <div className="w-full text-black mt-[60px] rounded-md bg-[#262626] pt-8 pb-8 px-10 flex flex-col items-center">
             <div className="flex flex-col items-center gap-3">
               <div className="text-[20px] sm:text-[24px] text-[#D9D9D9] font-bold leading-7">
                 Sign Up
               </div>
               <div className="text-[#E0DECF] text-[12px] sm:text-16px">
-                to continue with Daeta
+                to continue with DÆTA
               </div>
             </div>
 
@@ -180,7 +180,7 @@ const RegisterPage: React.FC = () => {
                 <input
                   type="string"
                   value={fullName}
-                  placeholder="Enter full name"
+                  placeholder="Enter Username"
                   onChange={(e) => setFullName(e.target.value)}
                   className="text-start w-full min-h-12 px-5 py-2 border border-[#F7FF98] rounded-lg focus:outline-none bg-transparent text-[14px] text-[#D9D9D9] leading-5"
                   required

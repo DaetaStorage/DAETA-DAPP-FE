@@ -6,14 +6,13 @@ import BillingSvg from "@/components/svg/billing";
 import AccessSvg from "@/components/svg/access";
 import LogoutSvg from "@/components/svg/logout";
 import SettingSvg from "@/components/svg/gear";
-import "../app/globals.css";
-
-import { getCurrentUser } from "@/Hooks/authAPI";
+import LogoutModal from "@/components/Auth/LogoutModal";
 import setAuthToken from "@/Hooks/setAuthToken";
 import { store } from "@/Store/store";
 import { setToken } from "@/Store/reducers/UserReducer";
 import { useRouter } from "next/navigation";
-import LogoutModal from "@/components/Auth/LogoutModal";
+import { getCurrentUser } from "@/Hooks/authAPI";
+import "../app/globals.css";
 
 const TopBar = () => {
   const router = useRouter();

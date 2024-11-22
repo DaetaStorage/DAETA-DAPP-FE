@@ -96,11 +96,11 @@ const LoginPage: React.FC = () => {
   return (
     <div className="flex min-h-screen font-space-mono">
       <Head>
-        <title>Login - Daeta</title>
+        <title>Login - DÆTA</title>
       </Head>
-      <div className="hidden lg:flex lg:w-1/2 bg-[url('/test.png')] pt-0 pl-8 items-center justify-center">
+      <div className="hidden lg:flex lg:w-1/2 bg-[#262626] items-center justify-center SpaceMono">
         <img
-          src="/AuthBg.png"
+          src="https://vesting.daeta.xyz/AuthBg1.png"
           alt="auth_logo"
           className="h-[calc(100vh-100px)]"
         />
@@ -108,20 +108,20 @@ const LoginPage: React.FC = () => {
       <div className="w-full lg:w-1/2 flex bg-[#1c1c1c] py-[84px] px-5 lg:px-[84px] xl:px-[146px]">
         <div className="w-full max-w-[415px] mx-auto">
           <div className="flex flex-col gap-5 items-center">
-            <div className="text-[#F7FF98] text-[36px] space-mono font-bold tracking-[0.3px]">
-              Welcome back!
+            <div className="text-[#F7FF98] text-[36px] space-mono font-bold tracking-[0.3px] text-center">
+              Welcome to the DÆTA Storage
             </div>
             <div className="text-[#E0DECF] text-[16px] font-normal space-mono tracking-[0.3px] text-center">
               Enter your email and password below to access your account
             </div>
           </div>
 
-          <div className="w-full text-black mt-[60px] rounded-md bg-[#262626] py-6 px-10 shadow-[0px_0px_16px_4px_rgba(247,255,152,0.20)] flex flex-col items-center">
+          <div className="w-full text-black mt-[60px] rounded-md bg-[#262626] py-6 px-10 flex flex-col items-center">
             <div className="flex flex-col items-center gap-3">
               <div className="text-[24px] text-[#D9D9D9] font-bold leading-7">
                 Sign in
               </div>
-              <div className="text-[#E0DECF]">to continue with Daeta</div>
+              <div className="text-[#E0DECF]">to continue with DÆTA</div>
             </div>
 
             <div className="mt-6 flex flex-col items-center w-full gap-3">

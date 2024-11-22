@@ -1,15 +1,16 @@
 "use client";
+import Image from "next/image";
 import ResourceCard from "@/components/Fragment/Resource";
 import DashboardSvg from "@/components/svg/dashboard";
 import VaultSvg from "@/components/svg/vault";
 import ResourceSvg from "@/components/svg/resource";
 import DividerSvg from "@/components/svg/divider";
 import LogoutSvg from "@/components/svg/logout";
-import Image from "next/image";
+import LogoutModal from "@/components/Auth/LogoutModal";
+
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
-import LogoutModal from "@/components/Auth/LogoutModal";
 
 const Sidebar = () => {
   const router = useRouter();
@@ -42,9 +43,9 @@ const Sidebar = () => {
   return (
     <div className="bg-[#1C1C1C] w-64 min-h-screen flex flex-col flex-start justify-between">
       <div className="relative">
-        <div className="absolute top-0 left-0">
+        {/* <div className="absolute top-0 left-0">
           <img src="/testnet.png" alt="testnetLogo" />
-        </div>
+        </div> */}
         <div
           id="logo"
           onClick={() => router.push("/dashboard")}
